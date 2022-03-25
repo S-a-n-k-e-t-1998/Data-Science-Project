@@ -1,1 +1,48 @@
-
+import pandas as pd
+df=pd.read_csv(r"E:\10.python\project\house_rent_prediction\Pune_rent.csv")
+# In first class split the feature present in dataframe in to type 1) Numeric features 2) categorical features
+class DataSplit():
+    def data_split(self,df):
+        self.Numeric_columns=df.select_dtypes(['int64','float64']).columns
+        self.null_check=df[self.Numeric_columns].isnull().sum()
+#         print(self.null_check)
+        print('Numeric Columns >>\n',self.Numeric_columns)
+        print('*'*50)
+        self.Cat_columns=df.select_dtypes(['O']).columns
+        self.null_check2=df[self.Cat_columns].isnull().sum()
+        print('Categorical columns >>\n',self.Cat_columns)
+        print('*'*50)
+#After split find which features present null values.To make this second class, and use here single inheritance.    
+class NullValueColumns(DataSplit):
+    def Data_null_check(self,df):
+        self.df=df
+        self.data_split(self.df)
+#         print(self.Numeric_columns)
+        print('*'*50)
+        NumNullColumns=[var for var in self.Numeric_columns if self.null_check[var]>0 ]
+        if NumNullColumns:
+            print('Numeric feature null value columns>>\n',end=' ')
+            yield NumNullColumns
+        else:
+            print('Numeric feature null value columns >>\n',end=' ')
+            yield 'Not any null value in any Numeric feature'
+            
+        print('*'*50)
+            
+        CatNullColumns=[var for var in self.Cat_columns if self.null_check2[var]>0 ]
+        if CatNullColumns:
+            print('In categorical feature null values columns  >>\n', end=' ')
+            yield CatNullColumns
+        else:
+            print('In categorical feature null values columns >>\n', end=' ')
+            yield 'Not any null value in any categorical feature'
+OB=NullValueColumns()  #create the instance
+for i in OB.Data_null_check(df):  #pass here df as argument
+    print(i)     #yield create genrator object use for loop to iterate that genrator object.
+ 
+ 
+ # check another data frame
+ df=pd.read_csv(r"E:\10.python\03\14.03.2022\03_14_Pandas-20220315T052240Z-001\03_14_Pandas\titanic.csv")
+for i in OB.Data_null_check(df):
+    z=i
+    print(i)
