@@ -18,7 +18,12 @@ else:
 storage_path=r'E:\10.python\03\03.03.2022'
 ```
 4. Here use **Pytesseract OCR-Engine** to extract information from images to test.
-5. Click here for code
- 
-[Adhar_Pan_card](Adhar_Pan_Project/Pan_Adhar_details.py)
+5. Click here for code- [Adhar_Pan_card](Adhar_Pan_Project/Pan_Adhar_details.py)
 
+# BMI Calculator
+1. useing  tkinter create one UI
+2. After Run that code open one UI
+3. Fill Hight and Weight and click on calculate buttion.
+4. After click we get our BMI Ratio.
+5. Click Here For code-
+[BMI Indicator](BMI_Indicator/bmi.py)
