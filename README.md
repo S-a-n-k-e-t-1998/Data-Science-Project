@@ -27,3 +27,10 @@ storage_path=r'E:\10.python\03\03.03.2022'
 4. After click we get our BMI Ratio.
 5. Click Here For code-
 [BMI Indicator](BMI_Indicator/bmi.py)
+
+# Pandas Own Built Describe Function
+1. All statistical information return of each numeric feature.(Mean,Median,Mode,Varienace,Standard Deviation etc.
+2. You can find out mean,mode,Var,Std. Individualy.
+3. click here for code- [Describe Function](Pandas_describe_function_own_built/Pandas_describe_function_self_made.ipynb)
+
+# Thanks For Visiting
