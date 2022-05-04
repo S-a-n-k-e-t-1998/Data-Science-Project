@@ -5,6 +5,9 @@
   4. For reduce the overfitting use **regularization** Tech.(L2 regularization gives better result and reduce the overfitting).
   5. Accuracy of model is ***91%***.
   6. In this project lot of feature. Total 86 Feature. With help of correlation select linearly correlated feature only.
+  7. Created API by using flask.
+  8. click here for code- [House Price](House_Price_Prediction/price_prediction.ipynb)
+  9. click here for api- [House Price API](House_Price_Prediction/model_api/main.py)
   
 # Feature List-
 1. MSSubClass                
