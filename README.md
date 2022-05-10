@@ -8,6 +8,9 @@
 5. Click Here For code-
 [BMI Indicator](BMI_Indicator/bmi.py)
 
+#House Price Prediction
+ Details Information inside the folder
+
 # Pandas Own Built Describe Function
 1. All statistical information return of each numeric feature.(Mean,Median,Mode,Varienace,Standard Deviation etc.
 2. You can find out mean,mode,Var,Std. Individualy.
